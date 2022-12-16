@@ -14,7 +14,7 @@ return [
     */
     'servers' => [
         'main' => [
-            'host' => 'sharedwithexpose.com',
+            'host' => 'console.lol',
             'port' => 443,
         ],
     ],
@@ -32,7 +32,7 @@ return [
     | if available.
     |
     */
-    'server_endpoint' => 'https://expose.dev/api/servers',
+    'server_endpoint' => 'https://console.lol/api/servers',
 
     /*
     |--------------------------------------------------------------------------
@@ -55,7 +55,7 @@ return [
     | `true` to fall-back to the system default DNS servers.
     |
     */
-    'dns' => '127.0.0.1',
+    'dns' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -69,7 +69,7 @@ return [
     | > expose token YOUR-AUTH-TOKEN
     |
     */
-    'auth_token' => '',
+    'auth_token' => getenv('AUTH_TOKEN'),
 
     /*
     |--------------------------------------------------------------------------
@@ -83,7 +83,7 @@ return [
     | > expose default-domain YOUR-CUSTOM-WHITELABEL-DOMAIN
     |
     */
-    'default_domain' => null,
+    'default_domain' => 'console.lol',
 
     /*
     |--------------------------------------------------------------------------
@@ -95,7 +95,7 @@ return [
     | Otherwise you can specify it here manually.
     |
     */
-    'default_tld' => 'test',
+    'default_tld' => 'lol',
 
     /*
     |--------------------------------------------------------------------------
@@ -107,7 +107,7 @@ return [
     | automatically. Otherwise you can specify it here manually.
     |
     */
-    'default_https' => false,
+    'default_https' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -329,7 +329,7 @@ return [
         |
         */
         'users' => [
-            'username' => 'password',
+            getenv('USERNAME') => getenv('PASSWORD'),
         ],
 
         /*
