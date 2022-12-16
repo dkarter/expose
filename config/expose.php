@@ -329,7 +329,7 @@ return [
         |
         */
         'users' => [
-            getenv('USERNAME') => getenv('PASSWORD'),
+            'admin' => getenv('PASSWORD'),
         ],
 
         /*
